@@ -46,7 +46,6 @@ function Home() {
   console.log('Home component rendered');
 
   const showAlert = ({item}: {item: {id: string; uri: string}}) => {
-    // showing id of selected item
     Alert.alert(`Selected item id: ${item.id}`);
   };
 
@@ -105,12 +104,17 @@ const styles = StyleSheet.create({
   imageButton: {
     flex: 1,
     margin: 5,
+    paddingBottom: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
     width: '100%',
     // height: width / numColumns - 20,
     height: 200,
     borderRadius: 20,
+    borderWidth: 2,
+    borderColor: 'red',
   },
   topFilm: {
     alignItems: 'center',
