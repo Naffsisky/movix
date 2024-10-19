@@ -11,26 +11,29 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {StackParamList} from '../App';
 
-type NavigationProps = NavigationProp<StackParamList, 'Setting'>;
-
-function Header() {
-  console.log('Header component rendered');
+type NavigationProps = NavigationProp<StackParamList>;
+function Setting() {
   const navigation = useNavigation<NavigationProps>();
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={'light-content'} backgroundColor={'#282c34'} />
+    <View>
+      <SafeAreaView style={styles.container}>
+        <StatusBar barStyle={'light-content'} backgroundColor={'#282c34'} />
 
-      <View style={styles.headerRow}>
-        <TouchableOpacity
-          style={styles.iconContainer}
-          onPress={() => navigation.navigate('Setting')}>
-          <Icon name="cog" size={24} color="white" />
-        </TouchableOpacity>
-        <View style={styles.titleContainer}>
-          <Text style={styles.title}>Movix</Text>
+        <View style={styles.headerRow}>
+          <TouchableOpacity
+            style={styles.iconContainer}
+            onPress={() => navigation.goBack()}>
+            <Icon name="arrow-left" size={24} color="white" />
+          </TouchableOpacity>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>Setting</Text>
+          </View>
         </View>
+      </SafeAreaView>
+      <View>
+        <Text style={{color: 'white'}}>Setting</Text>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -56,9 +59,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     elevation: 5,
     fontWeight: 'bold',
-    letterSpacing: 3,
-    marginRight: 14,
   },
 });
 
-export default Header;
+export default Setting;

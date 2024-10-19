@@ -5,12 +5,14 @@ import Home from './pages/Home';
 import Category from './pages/Category';
 import SplashScreen from './pages/SplashScreen';
 import Film from './pages/Film';
+import Setting from './pages/Setting';
 
 export type StackParamList = {
   Home: undefined;
   Category: undefined;
   SplashScreen: undefined;
   Film: undefined;
+  Setting: undefined;
 };
 
 const Stack = createStackNavigator<StackParamList>();
@@ -29,6 +31,7 @@ function App() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Category" component={Category} />
         <Stack.Screen name="Film" component={Film} />
+        <Stack.Screen name="Setting" component={Setting} />
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
       </Stack.Navigator>
     </NavigationContainer>

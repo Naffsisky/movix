@@ -15,7 +15,6 @@ type NavigationProps = NavigationProp<StackParamList>;
 function Footer() {
   const navigation = useNavigation<NavigationProps>();
 
-  // Fungsi untuk membuat tombol navigasi dengan label dan rute tujuan
   const renderNavButton = (
     label: string,
     route: keyof StackParamList,
@@ -44,7 +43,7 @@ function Footer() {
       <View style={styles.navRow}>
         {renderNavButton('Category', 'Category', 'list')}
         {renderNavButton('Home', 'Home', 'home')}
-        {renderNavButton('Film', 'Film', 'tv')}
+        {renderNavButton('Movie', 'Film', 'tv')}
       </View>
     </SafeAreaView>
   );
@@ -62,6 +61,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     gap: 10,
+    paddingHorizontal: 10,
   },
   navButton: {
     padding: 15,
