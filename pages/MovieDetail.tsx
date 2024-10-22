@@ -38,7 +38,7 @@ function MovieDetail({route}: Props) {
             <Icon name="arrow-left" size={24} color="white" />
           </TouchableOpacity>
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>Setting</Text>
+            <Text style={styles.title}>Detail Movie</Text>
           </View>
         </View>
       </SafeAreaView>
